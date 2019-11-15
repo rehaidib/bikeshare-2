@@ -18,6 +18,10 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = str(input('Would you like to see data for Chicago, New York City, or Washington? ')).lower()
+    """
+    Asks user to specify a city.
+    Check if the city exist in the CITY_DATA dictionary
+    """
     while not in CITY_DATA:
         city = str(input('Please choose one of the cities to see data Chicago, New York, or Washington. ')).lower()
 
@@ -51,7 +55,9 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     df = pd.read_csv(CITY_DATA[city])
-
+    """
+    To filter by month or day, need to convert column 'Start Time' to datatime
+    """
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
