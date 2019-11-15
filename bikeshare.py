@@ -68,8 +68,8 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'not':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
+        months = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6}
+        month = months[month]
 
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
@@ -124,7 +124,7 @@ def station_stats(df):
     print('Most Frequent End Station:', popular_end_station)
 
     # TO DO: display most frequent combination of start station and end station trip
-    popular_both_station = (df['Start Station'] + ', ' + df['End Station']).mode()[0]
+    popular_both_station = (df['Start Station'] + ' (To) ' + df['End Station']).mode()[0]
     print('Most Frequent Both Station:', popular_both_station)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
