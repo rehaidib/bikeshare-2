@@ -1,19 +1,15 @@
 ### Date created
-11/15/2019
+Include the date you created this project and README file.
 
 ### Project Title
-Bikeshare-2 Test Project
+Replace the Project Title
 
 ### Description
-The project analysis Bikeshare data for 3 cities (New York, Washington, and Chicago).
-
-The project will ask the user to choose a city first, then decide if would like to filter data or not.
+Describe what your project is about and what it does
 
 ### Files used
-(code) bikeshare.py
-(data) chicago.csv
-(data) new_york_city.csv
-(data) washington.csv
+Include the files used
 
 ### Credits
-https://www.udacity.com/
+It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
